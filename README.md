@@ -30,6 +30,7 @@ restitue, le 10 l'automatise, le 11 la documente et la contrôle.
 |----|--------|-------------------|-------|
 | 01 | [Analyse ventes e-commerce (Olist)](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) | Étude métier sur données réelles : nettoyage, SQL, insights actionnables | SQL · storytelling |
 | 02 | [Nettoyage & qualité (NYC 311)](https://github.com/valentinratigniet-byte/projet-02-pipeline-nettoyage-qualite) | Profilage, règles SQL + Pandas, 8 tests qualité, rapport avant/après | Python · Pandas · SQL |
+| 03 | [Suivi de prix de jeux + web app](https://github.com/valentinratigniet-byte/projet-03-scraper-prix-jeux-dashboard) | Collecte API, SQLite, app Flask (filtres réactifs, Chart.js) · [aperçu](https://claude.ai/code/artifact/d5f09fe5-d4a7-4c49-ab40-51487d80077c) | Python · Flask · SQLite |
 | 07 | [Base de données e-commerce](https://github.com/valentinratigniet-byte/projet-07-base-ecommerce) | Modélisation 3NF, contraintes, index (`EXPLAIN` ~26× plus rapide) | PostgreSQL · Docker · Faker |
 | 08 | [Bibliothèque SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) | 16 requêtes métier : fenêtres, cohortes, RFM, CTE récursive | PostgreSQL · SQL avancé |
 | 09 | [Dashboard exécutif Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) | Modèle en étoile, 17 mesures DAX (YoY/YTD/MoM), RLS | Power BI · DAX · Power Query |

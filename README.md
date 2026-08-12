@@ -39,12 +39,14 @@ restitue, le 10 l'automatise, le 11 la documente et la contrôle.
 | 10 | [Pipeline ELT automatisé](https://github.com/valentinratigniet-byte/projet-10-pipeline-elt) | ELT medallion, chargement incrémental, 28 tests dbt, orchestration | dbt · Prefect · Python |
 | 11 | [Gouvernance & qualité](https://github.com/valentinratigniet-byte/projet-11-gouvernance) | Dictionnaire, conventions, 28 tests qualité, lignage, ownership/SLA | dbt · gouvernance |
 | 12 | [Dédoublonnage & golden record](https://github.com/valentinratigniet-byte/projet-12-nettoyage-standardisation-dedoublonnage) | Entity resolution : fuzzy matching (rapidfuzz + pg_trgm), survivorship, précision 97 % | Python · rapidfuzz · SQL |
+| 05 | [Assistant d'analyse financière RAG/LLM](https://github.com/valentinratigniet-byte/projet-05-assistant-analyse-financiere-rag) | RAG sur rapports annuels : récupération locale + Claude, garde-fous anti-hallucination mesurés | Python · RAG · Claude · Streamlit |
 
 ## 🛠️ Stack
 
 **Bases & SQL** PostgreSQL · modélisation 3NF & étoile · SQL analytique
 **Transformation & pipeline** dbt · Python · chargement incrémental · Prefect
 **Restitution** Power BI · DAX · Power Query · RLS
+**IA / LLM** RAG · embeddings · Claude API · garde-fous anti-hallucination
 **Outillage** Docker · Git/GitHub
 
 ## 🔗 Comment lire ce portfolio

@@ -35,6 +35,7 @@ restitue, le 10 l'automatise, le 11 la documente et la contrôle.
 | 09 | [Dashboard exécutif Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) | Modèle en étoile, 17 mesures DAX (YoY/YTD/MoM), RLS | Power BI · DAX · Power Query |
 | 10 | [Pipeline ELT automatisé](https://github.com/valentinratigniet-byte/projet-10-pipeline-elt) | ELT medallion, chargement incrémental, 28 tests dbt, orchestration | dbt · Prefect · Python |
 | 11 | [Gouvernance & qualité](https://github.com/valentinratigniet-byte/projet-11-gouvernance) | Dictionnaire, conventions, 28 tests qualité, lignage, ownership/SLA | dbt · gouvernance |
+| 12 | [Dédoublonnage & golden record](https://github.com/valentinratigniet-byte/projet-12-nettoyage-standardisation-dedoublonnage) | Entity resolution : fuzzy matching (rapidfuzz + pg_trgm), survivorship, précision 97 % | Python · rapidfuzz · SQL |
 
 ## 🛠️ Stack
 

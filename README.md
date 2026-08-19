@@ -14,11 +14,13 @@ flowchart LR
     P09["09 · Dashboard Power BI<br/>(étoile, DAX, RLS)"]
     P10["10 · Pipeline ELT<br/>(dbt + Prefect, incrémental)"]
     P11["11 · Gouvernance & qualité<br/>(dictionnaire + lignage)"]
+    P13["13 · Entrepôt cloud BigQuery<br/>(dlt + dbt, même étoile)"]
 
     P07 --> P08 --> P09
     P07 --> P10 --> P09
     P10 --> P11
     P07 -.-> P11
+    P07 --> P13
 ```
 
 La **base du Projet 07** est la source commune : le 08 l'interroge, le 09 la
@@ -40,6 +42,7 @@ restitue, le 10 l'automatise, le 11 la documente et la contrôle.
 | 11 | [Gouvernance & qualité](https://github.com/valentinratigniet-byte/projet-11-gouvernance) | Dictionnaire, conventions, 28 tests qualité, lignage, ownership/SLA | dbt · gouvernance |
 | 12 | [Dédoublonnage & golden record](https://github.com/valentinratigniet-byte/projet-12-nettoyage-standardisation-dedoublonnage) | Entity resolution : fuzzy matching (rapidfuzz + pg_trgm), survivorship, précision 97 % | Python · rapidfuzz · SQL |
 | 05 | [Assistant d'analyse financière RAG/LLM](https://github.com/valentinratigniet-byte/projet-05-assistant-analyse-financiere-rag) | RAG sur rapports annuels : récupération locale + Claude, garde-fous anti-hallucination mesurés | Python · RAG · Claude · Streamlit |
+| 13 | [Entrepôt central BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) | Même étoile que le Projet 09, restituée dans le cloud : `dlt` + dbt-bigquery, 12/12 tests, IAM à privilège minimal | BigQuery · dlt · dbt · Power BI |
 
 ## 🛠️ Stack
 
@@ -47,6 +50,7 @@ restitue, le 10 l'automatise, le 11 la documente et la contrôle.
 **Transformation & pipeline** dbt · Python · chargement incrémental · Prefect
 **Restitution** Power BI · DAX · Power Query · RLS
 **IA / LLM** RAG · embeddings · Claude API · garde-fous anti-hallucination
+**Cloud** BigQuery · dlt · IAM · GCP
 **Outillage** Docker · Git/GitHub
 
 ## 🔗 Comment lire ce portfolio

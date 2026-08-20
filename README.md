@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;13+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;14+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -43,16 +43,19 @@ flowchart LR
     P10["10 · Pipeline ELT<br/>dbt + Prefect"]
     P11["11 · Gouvernance<br/>dictionnaire + lignage"]
     P13["13 · Entrepôt BigQuery<br/>même étoile, cloud"]
+    P14["14 · Filiation<br/>traçabilité interactive"]
 
     P07 --> P08 --> P09
     P07 --> P10 --> P09
     P10 --> P11
     P07 -.-> P11
     P07 --> P13
+    P10 --> P14
+    P11 -.-> P14
 
     class P07 ambre
     class P09,P13 petrol
-    class P08,P10,P11 neutre
+    class P08,P10,P11,P14 neutre
 ```
 
 **Le même schéma dimensionnel tourne deux fois** : une fois en local
@@ -287,6 +290,24 @@ table.
 </details>
 
 <details>
+<summary><b>14 · Filiation</b> — documentation vivante et interactive de traçabilité</summary>
+<br>
+
+**Problème** : le lignage dbt (Projet 11) est exact mais lu par des
+data engineers — pas par quelqu'un qui demande juste "d'où vient ce chiffre ?".
+**Méthode** : page cliquable qui remonte un indicateur/colonne/table jusqu'à
+sa donnée brute ; jeu de données réel introspecté depuis le Projet 10
+(`manifest.json`/`catalog.json`/`run_results.json`, rien d'inventé), script
+Python rejouable après chaque `dbt run`.
+**Résultat** : 13 nœuds (5 sources + 8 modèles), **28 tests dbt réels**
+affichés avec leur statut, lecture seule + renvoi vers le système source
+(gouvernance, pas d'édition directe en base).
+
+![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+· [Repo](https://github.com/valentinratigniet-byte/projet-14-filiation)
+</details>
+
+<details>
 <summary><b>12 · Dédoublonnage & golden record</b> — entity resolution</summary>
 <br>
 
@@ -341,7 +362,7 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 13 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Un repo = un projet** | 14 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
 | **Tests systématiques** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12 |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
@@ -378,7 +399,7 @@ la fondation dont tout le reste découle.
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 13 projets.
+autant que le code pour donner une impression de cohérence sur 14 projets.
 
 <div align="center">
 

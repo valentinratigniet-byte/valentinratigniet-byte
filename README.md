@@ -26,10 +26,20 @@ réutilise la précédente, de la base opérationnelle jusqu'au cloud.
 
 ---
 
-## 🧭 L'écosystème
+## 🧭 Par où commencer ?
 
-Un seul socle (la base du **Projet 07**) irrigue tout le reste. Chaque flèche
-est une vraie dépendance technique — pas juste un ordre de lecture.
+| Tu as... | Regarde... |
+|---|---|
+| **2 minutes** | Le diagramme juste en dessous — il raconte tout le portfolio en un coup d'œil |
+| **15 minutes** | [Projet 07](https://github.com/valentinratigniet-byte/projet-07-base-ecommerce) (la fondation) → [Projet 10](https://github.com/valentinratigniet-byte/projet-10-pipeline-elt) (le pipeline qui l'automatise) → [Projet 05](https://github.com/valentinratigniet-byte/projet-05-assistant-analyse-financiere-rag) (la pièce maîtresse IA) |
+| **Envie de "sentir" comment tout s'articule** | [Projet 14](https://github.com/valentinratigniet-byte/projet-14-filiation) — clique sur n'importe quel indicateur et remonte, niveau par niveau, jusqu'à la donnée brute |
+| **Vue par compétence** | Le tableau [Projets ci-dessous](#-projets--classés-par-compétence-dominante), classé Data Analyst / Data Engineer / IA-LLM |
+
+## 🧩 L'écosystème
+
+Un seul socle (la base du **Projet 07**, en ambre ci-dessous) irrigue tout le
+reste. Chaque flèche est une vraie dépendance technique — pas juste un ordre
+de lecture.
 
 ```mermaid
 flowchart LR
@@ -290,7 +300,7 @@ table.
 </details>
 
 <details>
-<summary><b>14 · Filiation</b> — documentation vivante et interactive de traçabilité</summary>
+<summary>⭐ <b>14 · Filiation</b> — documentation vivante et interactive de traçabilité</summary>
 <br>
 
 **Problème** : le lignage dbt (Projet 11) est exact mais lu par des
@@ -323,7 +333,7 @@ regrouper les doublons, règles de survivorship.
 </details>
 
 <details open>
-<summary><b>13 · Entrepôt central BigQuery</b> — le même modèle, dans le cloud</summary>
+<summary>⭐ <b>13 · Entrepôt central BigQuery</b> — le même modèle, dans le cloud <i>(déplié — la preuve cloud du portfolio)</i></summary>
 <br>
 
 **Problème** : est-ce que la modélisation dimensionnelle du Projet 09 tient
@@ -341,7 +351,7 @@ modèle documenté in-situ.
 ### 🤖 IA / LLM
 
 <details open>
-<summary><b>05 · Assistant d'analyse financière (RAG/LLM)</b> — la pièce maîtresse IA</summary>
+<summary>⭐ <b>05 · Assistant d'analyse financière (RAG/LLM)</b> — la pièce maîtresse IA <i>(déplié — le projet le plus démonstratif)</i></summary>
 <br>
 
 **Problème** : un LLM seul hallucine des chiffres financiers plausibles mais
@@ -363,7 +373,7 @@ refus explicite mesuré).
 | Pratique | Comment elle est appliquée ici |
 |---|---|
 | **Un repo = un projet** | 14 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12 |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; 9 des 14 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -386,13 +396,13 @@ refus explicite mesuré).
 
 ---
 
-## 🔗 Comment lire ce portfolio
+## 🔗 Une structure commune, projet après projet
 
-Chaque dépôt suit la même structure : un **README** (problème métier → méthode
-→ résultats chiffrés → comment rejouer), un dossier `docs/`, et du code
-versionné. Commence par le
-[Projet 07](https://github.com/valentinratigniet-byte/projet-07-base-ecommerce),
-la fondation dont tout le reste découle.
+Chaque dépôt suit le même plan — **problème métier → méthode → résultats
+chiffrés → comment rejouer** — un dossier `docs/`, du code versionné, et une
+CI qui vérifie ce qu'il avance plutôt que de se contenter de l'affirmer.
+Retrouve le point de départ recommandé plus haut, dans
+[« Par où commencer »](#-par-où-commencer-).
 
 ## 🎨 Identité visuelle
 

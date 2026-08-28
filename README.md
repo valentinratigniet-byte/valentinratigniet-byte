@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;14+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;15+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -237,6 +237,29 @@ modèle.
 · [Repo](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi)
 </details>
 
+### 💼 Contrôleur de gestion / Business Analyst — du chiffre à la décision
+
+<details open>
+<summary>⭐ <b>15 · Reporting de gestion</b> — écarts Budget/Réel, méthode Prix/Volume/Mix <i>(déplié)</i></summary>
+<br>
+
+**Problème** : "CA réel 70,3 M€, Budget 71,6 M€" ne dit rien à un directeur
+commercial — a-t-on vendu moins, moins cher, ou pas les bonnes catégories ?
+**Méthode** : décomposition Prix/Volume/Mix (méthode standard de contrôle de
+gestion), identités algébriques vérifiées par `assert` (pas de chiffre publié
+sans preuve qu'il boucle), commentaires de clôture générés par département.
+**Résultat** : écart total **-1,9 %** expliqué département par département —
+deux départements compensent en partie les deux autres, invisible sur le seul
+total consolidé.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Excel](https://img.shields.io/badge/-Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg)
+</details>
+
+> Voir aussi [projet-baptiste-valentin](https://github.com/valentinratigniet-byte/projet-baptiste-valentin) (projet binôme) :
+> data platform de pilotage d'entreprise avec modèle Réel/Budget/Forecast complet,
+> 4 tableaux de bord dont un "Pilotage CG" et un PDG/FinOps.
+
 ### 🏗️ Data Engineer — pipelines & infrastructure
 
 <details>
@@ -372,8 +395,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 14 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; 9 des 14 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 15 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité comptable sur le projet 15 ; 11 des 15 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -409,7 +432,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 14 projets.
+autant que le code pour donner une impression de cohérence sur 15 projets.
 
 <div align="center">
 

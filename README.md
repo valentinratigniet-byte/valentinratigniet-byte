@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;15+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;16+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -256,6 +256,23 @@ total consolidé.
 · [Repo](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg)
 </details>
 
+<details open>
+<summary>⭐ <b>16 · Business case — investissement</b> — NPV/IRR/sensibilité <i>(déplié)</i></summary>
+<br>
+
+**Problème** : un fournisseur promet de réduire les annulations de commande —
+combien ça vaut vraiment, et à partir de quand ?
+**Méthode** : constat mesuré sur données réelles (7,18 % d'annulation), NPV/IRR
+(bissection, sans dépendance financière externe)/payback, grille de sensibilité
+2 variables, mémo de décision écrit avec recommandation conditionnelle.
+**Résultat** : **NPV +36 081 €, IRR 22,4 %**, mais marge de sécurité étroite —
+la sensibilité identifie le point de bascule et motive un go conditionnel
+(test A/B avant déploiement complet) plutôt qu'un feu vert aveugle.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement)
+</details>
+
 > Voir aussi [projet-baptiste-valentin](https://github.com/valentinratigniet-byte/projet-baptiste-valentin) (projet binôme) :
 > data platform de pilotage d'entreprise avec modèle Réel/Budget/Forecast complet,
 > 4 tableaux de bord dont un "Pilotage CG" et un PDG/FinOps.
@@ -395,8 +412,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 15 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité comptable sur le projet 15 ; 11 des 15 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 16 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité comptable/financière sur les projets 15/16 ; 12 des 16 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -432,7 +449,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 15 projets.
+autant que le code pour donner une impression de cohérence sur 16 projets.
 
 <div align="center">
 

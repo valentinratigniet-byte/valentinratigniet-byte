@@ -270,7 +270,7 @@ la sensibilité identifie le point de bascule et motive un go conditionnel
 (test A/B avant déploiement complet) plutôt qu'un feu vert aveugle.
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-· [Repo](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement)
+· [Repo](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) · [Démo live](https://projet-16-business-case-investissement-data.streamlit.app/)
 </details>
 
 <details>

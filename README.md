@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;16+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;17+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -273,6 +273,26 @@ la sensibilité identifie le point de bascule et motive un go conditionnel
 · [Repo](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement)
 </details>
 
+<details>
+<summary><b>17 · Rentabilité produit/client</b> — allocation ABC costing</summary>
+<br>
+
+**Problème** : un produit rentable en marge brute peut détruire de la valeur
+une fois les coûts indirects réellement alloués — invisible dans une
+répartition au prorata du CA.
+**Méthode** : 3 pools de coûts indirects (logistique, paiement, SAV), chacun
+sur son véritable inducteur (nb de lignes, montant réel par méthode de
+paiement, nb de commandes) ; réconciliations CA produit/client vérifiées par
+`assert` contre le total mesuré en base.
+**Résultat** : **9 produits sur 2000** à marge nette négative malgré une
+marge brute positive, seuil de rentabilité isolé (~12,80 €/ligne) ; signal
+client honnêtement rapporté comme absent sur ce jeu de données plutôt que
+forcé.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client)
+</details>
+
 > Voir aussi [projet-baptiste-valentin](https://github.com/valentinratigniet-byte/projet-baptiste-valentin) (projet binôme) :
 > data platform de pilotage d'entreprise avec modèle Réel/Budget/Forecast complet,
 > 4 tableaux de bord dont un "Pilotage CG" et un PDG/FinOps.
@@ -412,8 +432,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 16 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité comptable/financière sur les projets 15/16 ; 12 des 16 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 17 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; 13 des 17 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -449,7 +469,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 16 projets.
+autant que le code pour donner une impression de cohérence sur 17 projets.
 
 <div align="center">
 

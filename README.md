@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;17+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;18+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -408,6 +408,28 @@ modèle documenté in-situ.
 · [Repo](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery)
 </details>
 
+<details open>
+<summary>⭐ <b>18 · Monitoring Eco2mix</b> — infra live en production <i>(déplié — le seul projet du portfolio avec un flux vraiment temps réel)</i></summary>
+<br>
+
+**Problème** : tous les projets précédents partent d'un import one-shot —
+aucun ne prouve savoir exploiter une infra en prod (déploiement, secrets,
+uptime) sur un flux qui ne s'arrête jamais.
+**Méthode** : VPS + Coolify auto-hébergé (n8n + Metabase, HTTPS Let's
+Encrypt réel), ingestion automatisée toutes les 15 min (API RTE Eco2mix)
+vers Supabase avec RLS **testée avec les vrais rôles** (`SET ROLE`, 6/6 cas),
+marts dbt, dashboards Metabase + Power BI, lignage branché sur le
+[Projet 14](https://github.com/valentinratigniet-byte/projet-14-filiation)
+avec refresh quotidien automatisé.
+**Résultat** : pipeline qui tourne **tout seul depuis le déploiement**,
+7 phases du cadrage terminées et vérifiées en conditions réelles (pas
+supposées) — cadrage complet dans
+[l'issue #1](https://github.com/valentinratigniet-byte/valentinratigniet-byte/issues/1).
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+· [Repo](https://github.com/valentinratigniet-byte/projet-18-monitoring-energie-rte)
+</details>
+
 ### 🤖 IA / LLM
 
 <details open>
@@ -432,8 +454,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 17 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; 13 des 17 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 18 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur le projet 18 ; 14 des 18 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -469,7 +491,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 17 projets.
+autant que le code pour donner une impression de cohérence sur 18 projets.
 
 <div align="center">
 

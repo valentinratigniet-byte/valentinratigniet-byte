@@ -427,7 +427,7 @@ supposées) — cadrage complet dans
 [l'issue #1](https://github.com/valentinratigniet-byte/valentinratigniet-byte/issues/1).
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-· [Repo](https://github.com/valentinratigniet-byte/projet-18-monitoring-energie-rte)
+· [Repo](https://github.com/valentinratigniet-byte/projet-18-monitoring-energie-rte) · [Démo live](https://valentinratigniet-byte.github.io/projet-18-monitoring-energie-rte/)
 </details>
 
 ### 🤖 IA / LLM

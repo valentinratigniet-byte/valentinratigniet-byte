@@ -430,6 +430,31 @@ supposées) — cadrage complet dans
 · [Repo](https://github.com/valentinratigniet-byte/projet-18-monitoring-energie-rte) · [Démo live](https://valentinratigniet-byte.github.io/projet-18-monitoring-energie-rte/)
 </details>
 
+<details open>
+<summary>⭐ <b>19 · Plateforme data d'entreprise</b> — le plus gros projet solo du portfolio <i>(déplié — 3 domaines métier bout en bout)</i></summary>
+<br>
+
+**Problème** : aucun projet précédent ne fait cohabiter plusieurs domaines
+métier hétérogènes (technos et qualité de données différentes) dans un
+même entrepôt gouverné.
+**Méthode** : 3 bases "de production" simulées par usage réel sur plusieurs
+mois (AS/400 + Excel pour les Ventes, SQL Server + CSV + Factur-X pour la
+Finance, MySQL + JSON + mock API SaaS OAuth2/webhook/reverse-ETL pour le
+Marketing) → dbt vers un entrepôt en **modèle constellation** (dimensions
+partagées, plusieurs faits), RLS multi-rôles testée par `SET ROLE`,
+housekeeping index/bloat sur les 3 moteurs réels, lignage branché sur le
+[Projet 14](https://github.com/valentinratigniet-byte/projet-14-filiation).
+**Résultat** : **51/51 tests dbt**, réconciliation Factur-X **91 %
+structuré contre 44 % non structuré** (argument chiffré pour la
+migration e-facturation), absence de corrélation marketing→ventes
+honnêtement rapportée avec sa cause racine plutôt qu'une conclusion
+forcée — 7 phases du cadrage terminées, cadrage complet dans
+[l'issue #2](https://github.com/valentinratigniet-byte/valentinratigniet-byte/issues/2).
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white) ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![Airflow](https://img.shields.io/badge/-Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise)
+</details>
+
 ### 🤖 IA / LLM
 
 <details open>

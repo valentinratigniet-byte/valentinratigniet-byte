@@ -480,7 +480,7 @@ refus explicite mesuré).
 | Pratique | Comment elle est appliquée ici |
 |---|---|
 | **Un repo = un projet** | 19 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur le projet 18 ; 14 des 19 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; 15 des 19 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |

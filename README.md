@@ -145,6 +145,67 @@ tâche — jamais un rôle "Owner" par défaut. Sur le Projet 13, le compte
 <code>bigquery.jobUser</code>, aucun accès au reste du projet cloud.
 </details>
 
+<details>
+<summary><b>ERP, c'est quoi exactement ?</b></summary>
+<br>
+<i>Enterprise Resource Planning</i> — le logiciel qui centralise la gestion
+d'une entreprise (ventes, achats, stocks, compta) sur une même base de
+données. Sur ce portfolio, un ERP n'est jamais un mock Postgres déguisé :
+Ventes/Commerce tourne sur un vrai AS/400 (Db2 for i, conventions
+authentiques), Finance/Compta sur un vrai SQL Server édition Developer —
+reproduire un ERP, c'est reproduire sa techno, pas seulement sa forme.
+Projet 19, section <a href="https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise/blob/main/docs/outils.md">docs/outils.md</a>.
+</details>
+
+<details>
+<summary><b>dbt, en une phrase</b></summary>
+<br>
+<i>data build tool</i> — transforme la donnée <i>en SQL versionné</i>
+directement dans l'entrepôt (approche ELT, voir ci-dessus) : chaque
+transformation est un fichier <code>.sql</code> testable, documenté,
+avec lignage automatique entre modèles. Pas un script qu'on relance à la
+main — un vrai projet logiciel appliqué à la donnée. Utilisé dans les
+projets 04, 10, 13, 18 et 19 (snapshots SCD2, tests, contracts,
+exposures).
+</details>
+
+<details>
+<summary><b>Entrepôt de données (data warehouse)</b></summary>
+<br>
+La base où la donnée nettoyée et modélisée vit pour l'analyse — séparée
+des bases opérationnelles (ERP, CRM...) qui, elles, servent à faire
+tourner le métier au quotidien. Structuré en couches : <code>raw</code>
+(copie brute, jamais modifiée) → <code>staging</code> (nettoyage) →
+<code>marts</code> (modèle en étoile ou constellation, prêt pour la BI).
+Projets 04 et 19 (ce dernier avec 3 domaines qui convergent vers un même
+entrepôt).
+</details>
+
+<details>
+<summary><b>Pourquoi une "base de production" simulée ?</b></summary>
+<br>
+Aucune vraie donnée d'entreprise n'est utilisée (confidentialité) — mais
+la <i>technique</i> est réelle : un simulateur d'usage fait vivre chaque
+base sur plusieurs mois simulés, pour que le volume et les vrais
+problèmes (doublons, bloat, formats incohérents) émergent de l'usage
+plutôt que d'être injectés à la main. Toujours présenté entre guillemets
+dans les README pour ne jamais laisser penser que c'est une vraie
+entreprise. Projet 19.
+</details>
+
+<details>
+<summary><b>Pourquoi Power BI plutôt qu'un autre outil de visualisation ?</b></summary>
+<br>
+Standard du marché en environnement Microsoft/entreprise française,
+avec un vrai langage de modélisation (DAX) et une sécurité au niveau
+des lignes (RLS) native — pas juste des graphiques. "Piloter" veut dire
+concrètement : un modèle en étoile propre, des mesures DAX qui répondent
+à une vraie question métier (pas juste des sommes), et un accès
+restreint par rôle (RH ne voit pas Finance, etc.). Projets 09, 13, 18
+et 19 — même toolchain à chaque fois, cohérence de compétence plutôt que
+survol d'outils différents.
+</details>
+
 ---
 
 ## 📂 Projets — classés par compétence dominante

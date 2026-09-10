@@ -79,12 +79,16 @@ l'infrastructure qui la porte.
 <summary><b>📐 Le motif qui revient dans presque tous les projets : l'architecture "medallion"</b></summary>
 <br>
 
+Même démarche à chaque fois, du système source jusqu'à la restitution —
+le terme technique en gras, ce qu'il veut dire en simple juste en dessous :
+
 ```mermaid
 flowchart LR
-    SRC[("Sources<br/>API, CSV, base OLTP")] --> RAW[("raw<br/>copie fidèle, non transformée")]
-    RAW --> STG[("staging<br/>nettoyage, typage, renommage")]
-    STG --> MARTS[("marts<br/>étoile : faits + dimensions")]
-    MARTS --> BI["Power BI / Streamlit<br/>restitution"]
+    ERP[("🏭 ERP / système source<br/>AS/400, SQL Server...<br/><i>la vraie techno où naît la donnée</i>")] --> SRC[("🎭 Extraction<br/>API, CSV, base OLTP<br/><i>copie d'une 'base de production' simulée</i>")]
+    SRC --> RAW[("📥 raw<br/>copie fidèle, non transformée<br/><i>rien n'est perdu, tout est rejouable</i>")]
+    RAW --> STG[("🧹 staging<br/>nettoyage, typage, renommage<br/><i>ETL/ELT via dbt, en SQL testé</i>")]
+    STG --> MARTS[("⭐ marts<br/>étoile : faits + dimensions<br/><i>l'entrepôt, une seule source de vérité</i>")]
+    MARTS --> BI["📊 Power BI / Streamlit<br/>restitution<br/><i>chacun voit ce qu'il a le droit de voir</i>"]
 ```
 
 Chaque couche a un seul rôle : `raw` garde une copie fidèle de la source

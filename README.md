@@ -475,6 +475,12 @@ modèle documenté in-situ.
 · [Repo](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery)
 </details>
 
+> Voir aussi [olist-analytics-dbt-snowflake](https://github.com/valentinratigniet-byte/olist-analytics-dbt-snowflake)
+> (reproduction guidée d'une formation vidéo, pas un projet original — annoncé comme tel dans son
+> propre README) : même stack ELT (S3 → Snowflake → dbt) sur le dataset réel Olist, poussée jusqu'au
+> bout — 25/25 tests, snapshot SCD2, orchestration Prefect, CI GitHub Actions verte,
+> [doc de lignage publiée](https://valentinratigniet-byte.github.io/olist-analytics-dbt-snowflake/).
+
 <details open>
 <summary>⭐ <b>18 · Monitoring Eco2mix</b> — infra live en production <i>(déplié — le seul projet du portfolio avec un flux vraiment temps réel)</i></summary>
 <br>

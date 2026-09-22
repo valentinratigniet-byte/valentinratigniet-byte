@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;19+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;20+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -528,6 +528,25 @@ forcée — 7 phases du cadrage terminées, cadrage complet dans
 · [Repo](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise)
 </details>
 
+<details>
+<summary><b>20 · Pilotage de projets d'ingénierie</b> — Azure Databricks/PySpark, construit pour une candidature ciblée</summary>
+<br>
+
+**Problème** : prouver la stack exacte demandée par une offre précise
+(Data Engineer, Azure Databricks/PySpark/Azure DevOps + Power BI) plutôt
+qu'une compétence générique adjacente.
+**Méthode** : pipeline PySpark (ingestion → nettoyage → contrôles qualité →
+marts KPI) exécuté sur Azure Databricks Community Edition, requêtes SQL,
+pipeline Azure DevOps, dashboard Power BI (étoile, 16 mesures DAX) — mapping
+détaillé exigence de l'offre → preuve dans le repo.
+**Résultat** : **11/11 tests PASS**, 10 contrôles qualité automatisés
+(doublons, bornes, intégrité référentielle) avant/après fiabilisation,
+dérive budgétaire de +11,9 % détectée sur le portefeuille synthétique.
+
+![PySpark](https://img.shields.io/badge/-PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white) ![Databricks](https://img.shields.io/badge/-Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white) ![Azure DevOps](https://img.shields.io/badge/-Azure%20DevOps-0078D7?style=flat-square&logo=azuredevops&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+· [Repo](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks)
+</details>
+
 ### 🤖 IA / LLM
 
 <details open>
@@ -552,8 +571,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 19 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; 15 des 19 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 20 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; 16 des 20 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -589,7 +608,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 19 projets.
+autant que le code pour donner une impression de cohérence sur 20 projets.
 
 <div align="center">
 

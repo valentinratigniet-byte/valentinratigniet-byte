@@ -360,7 +360,7 @@ forcé.
 · [Repo](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client)
 </details>
 
-> Voir aussi [projet-baptiste-valentin](https://github.com/valentinratigniet-byte/projet-baptiste-valentin) (projet binôme) :
+> Voir aussi [Data platform — contrôle de gestion](https://github.com/valentinratigniet-byte/data-platform-controle-gestion) :
 > data platform de pilotage d'entreprise avec modèle Réel/Budget/Forecast complet,
 > 4 tableaux de bord dont un "Pilotage CG" et un PDG/FinOps.
 

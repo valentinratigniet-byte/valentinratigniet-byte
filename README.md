@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;20+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;21+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -547,6 +547,27 @@ dérive budgétaire de +11,9 % détectée sur le portefeuille synthétique.
 · [Repo](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks)
 </details>
 
+<details>
+<summary><b>21 · Intégrer Power BI dans un transporteur</b> — entrepôt DuckDB + dbt et 23 rapports de pilotage</summary>
+<br>
+
+**Problème** : chez TransVal Logistique (transporteur citerne fictif), Power BI
+est branché en direct sur 6 systèmes de gestion et chaque rapport refait son
+propre nettoyage : mesures recopiées, `TODAY()` partout, deux rapports qui
+donnent deux chiffres pour les mêmes heures, aucune sécurité ni aucun test.
+**Méthode** : entrepôt DuckDB + dbt incrémental entre les sources et Power BI
+(imports CDC / fenêtres / snapshots, SCD2, 48 tests), modèle sémantique
+PBIP/TMDL généré (352 mesures, une définition chacune), 23 rapports de
+pilotage, un par sujet, sécurité par ligne, orchestration et alertes n8n,
+déploiement fabric-cicd.
+**Résultat** : **mêmes chiffres prouvés KPI par KPI** (Power BI de départ ↔
+entrepôt 93/97 + 4 erreurs corrigées et documentées ; entrepôt ↔ nouveau
+modèle : 2 213 valeurs, 0 écart), pipeline complet en ≈ 2 minutes rejoué en CI.
+
+![DuckDB](https://img.shields.io/badge/-DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport)
+</details>
+
 ### 🤖 IA / LLM
 
 <details open>
@@ -571,8 +592,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 20 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; 16 des 20 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 21 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/12/14 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 17 des 21 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -608,7 +629,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 20 projets.
+autant que le code pour donner une impression de cohérence sur 21 projets.
 
 <div align="center">
 

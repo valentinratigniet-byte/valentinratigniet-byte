@@ -38,6 +38,37 @@ réutilise la précédente, de la base opérationnelle jusqu'au cloud.
 
 **Master 2 Économie appliquée** (conseil économique aux entreprises), Université de Lille · 2024 → 2026
 
+## 🤝 Comment je travaille avec l'IA
+
+Ce portfolio a été construit avec un assistant de code IA (Claude Code) — c'est
+visible dans les commits (`Co-Authored-By`), et je préfère le dire clairement.
+
+J'utilise l'IA comme un assistant qui accroît ma productivité, mon raisonnement
+et ma vitesse d'apprentissage. Le code produit avec elle est **relu, corrigé,
+vérifié et, autant que possible, refait par moi**, pour toujours comprendre ce
+qui est fait et produit.
+
+**Ce qui relève de moi** :
+- **Le cadrage métier** : le problème, les KPI, les règles de gestion, le
+  périmètre. Exemple : pour le projet 20, construit pour une candidature, j'ai
+  choisi le pilotage de projets d'ingénierie plutôt que de réutiliser
+  l'e-commerce, pour coller au « Management de Projet » de l'offre.
+- **Le SQL et Power BI / DAX** : je les relis, les corrige et les maîtrise (modélisation, mesures, rapports).
+- **L'exécution et la vérification** : je lance les pipelines et je recoupe les
+  chiffres avant de publier (projet 20 : agrégats Databricks comparés au calcul
+  local, au chiffre près).
+
+**Ce que ça m'a appris** :
+- **Relire, c'est comprendre** : je réponds de chaque transformation, donc je
+  dois la comprendre.
+- **Vérifier avant de croire** : l'IA peut se tromper avec assurance ; tout
+  chiffre est recoupé par un calcul indépendant.
+- **Bien spécifier et guider** : le résultat dépend de la clarté du besoin, ce
+  qui m'a entraîné à cadrer comme un Business Analyst.
+
+Je peux expliquer et défendre en entretien chaque choix et chaque chiffre de ces
+projets.
+
 ## 🧭 Par où commencer ?
 
 | Vous recrutez un·e... | Commencez par... |

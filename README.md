@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;21+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;22+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -74,7 +74,7 @@ projets.
 
 | Vous recrutez un·e... | Commencez par... |
 |---|---|
-| **Data Analyst** | [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
+| **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
 | **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
 | **Business Analyst / Contrôle de gestion** | [21 · Power BI → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
 | **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
@@ -145,6 +145,23 @@ source — utilisé dans les projets 04, 10, 11 et 13.
 ## 📂 Projets — classés par compétence dominante
 
 ### 📊 Data Analyst — de la donnée brute à la décision
+
+<details open>
+<summary>⭐ <b>22 · Prix des logements de la métropole lilloise</b> — 73 271 ventes notariées réelles (DVF), régression hédonique <i>(déplié)</i></summary>
+<br>
+
+**Problème** : un prix au m² moyen par commune ne dit presque rien — à Lille il varie du simple au double
+d'un quartier à l'autre. Ce bien est-il au prix du marché, compte tenu de ce qu'il est et de là où il est ?
+**Méthode** : nettoyage DVF documenté (dont une résidence étudiante vendue lot par lot qui gonflait une
+médiane de 90 %), régression hédonique à effets fixes quartier et trimestre, validation sur ventes non
+vues, test statistique, note d'une page pour un décideur.
+**Résultat** : à bien égal, l'emplacement fait varier le prix de **−30 % à +37 %** ; baisse 2024/2022 de
+**−3,9 %** (appartements) et **−7,1 %** (maisons), p < 10⁻¹⁷ ; une cave ou un parking vaut **+7,6 %** ;
+erreur d'estimation **13,7 %** contre 18,4 % pour la médiane communale.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![statsmodels](https://img.shields.io/badge/-statsmodels-4479A1?style=flat-square) ![Open data](https://img.shields.io/badge/-DVF%20open%20data-137A8B?style=flat-square)
+· [Repo](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) · [Note décideur](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel/blob/main/docs/note-decideur.md)
+</details>
 
 <details>
 <summary><b>01 · Analyse des ventes e-commerce (Olist)</b> — données réelles Kaggle, ~100k commandes</summary>
@@ -522,8 +539,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 21 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 20 des 21 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 22 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 21 des 22 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -559,7 +576,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 21 projets.
+autant que le code pour donner une impression de cohérence sur 22 projets.
 
 <div align="center">
 

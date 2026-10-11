@@ -28,14 +28,24 @@ réutilise la précédente, de la base opérationnelle jusqu'au cloud.
 
 ---
 
+## 💼 Expérience
+
+**Business Analyst opérationnel (alternance), Groupe Delcroix** · août 2025 → septembre 2026
+- Refonte du reporting autour d'un **modèle sémantique Power BI partagé** (gouvernance, maintenance, charge serveur).
+- Étapes Power Query converties en **SQL natif** sur des sources hétérogènes (AS/400, TMS, OPM) pour alléger les rapports.
+- Tableaux de bord de pilotage opérationnel : TRS véhicules, plannings, écarts comptables, projections d'heures.
+- Étude de cadrage : passage à un **entrepôt de données centralisé**, méthode **ABC**, accès par profil/service.
+
+**Master 2 Économie appliquée** (conseil économique aux entreprises), Université de Lille · 2024 → 2026
+
 ## 🧭 Par où commencer ?
 
-| Tu as... | Regarde... |
+| Vous recrutez un·e... | Commencez par... |
 |---|---|
-| **2 minutes** | Le diagramme juste en dessous — il raconte tout le portfolio en un coup d'œil |
-| **15 minutes** | [Projet 07](https://github.com/valentinratigniet-byte/projet-07-base-ecommerce) (la fondation) → [Projet 10](https://github.com/valentinratigniet-byte/projet-10-pipeline-elt) (le pipeline qui l'automatise) → [Projet 05](https://github.com/valentinratigniet-byte/projet-05-assistant-analyse-financiere-rag) (la pièce maîtresse IA) |
-| **Envie de "sentir" comment tout s'articule** | [Projet 14](https://github.com/valentinratigniet-byte/projet-14-filiation) — clique sur n'importe quel indicateur et remonte, niveau par niveau, jusqu'à la donnée brute |
-| **Vue par compétence** | Le tableau [Projets ci-dessous](#-projets--classés-par-compétence-dominante), classé Data Analyst / Data Engineer / IA-LLM |
+| **Data Analyst** | [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
+| **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
+| **Business Analyst / Contrôle de gestion** | [21 · Power BI → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
+| **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
 
 ## 🧩 L'écosystème
 
@@ -96,118 +106,6 @@ Chaque couche a un seul rôle : `raw` garde une copie fidèle de la source
 changer le sens métier ; `marts` expose un modèle prêt pour l'analyse.
 Séparer ces couches évite qu'une transformation cassée corrompe la donnée
 source — utilisé dans les projets 04, 10, 11 et 13.
-</details>
-
----
-
-## 📚 Concepts clés, expliqués simplement
-
-<details>
-<summary><b>Qu'est-ce qu'un schéma en étoile ?</b></summary>
-<br>
-Une table de <b>faits</b> (les événements mesurables — ex. une vente) entourée
-de tables de <b>dimensions</b> (le contexte — client, produit, date). On
-dénormalise volontairement pour que les outils BI calculent vite et que le
-modèle se comprenne sans formation. Utilisé dans les projets 04, 09 et 13.
-</details>
-
-<details>
-<summary><b>ETL vs ELT — quelle différence ?</b></summary>
-<br>
-ETL transforme les données <i>avant</i> de les charger. ELT charge d'abord la
-donnée brute, puis transforme <i>dans</i> l'entrepôt (avec dbt, par exemple) —
-plus flexible : on garde toujours la source pour rejouer une transformation
-différente sans tout ré-extraire. C'est l'approche des projets 04, 10 et 13.
-</details>
-
-<details>
-<summary><b>Pourquoi tester ses données comme du code ?</b></summary>
-<br>
-Un test dbt (unicité, non-nullité, intégrité référentielle) casse le pipeline
-si une hypothèse sur la donnée n'est plus vraie — plutôt que de laisser un
-dashboard afficher un chiffre faux en silence. Sur ce portfolio :
-<b>28 tests</b> (Projet 10), <b>28 tests</b> (Projet 11), <b>12/12 tests</b>
-(Projet 13).
-</details>
-
-<details>
-<summary><b>RAG, en une phrase</b></summary>
-<br>
-<i>Retrieval-Augmented Generation</i> : avant de répondre, le modèle cherche
-les passages pertinents dans les documents (recherche vectorielle), puis
-génère sa réponse <i>uniquement</i> à partir de ces extraits, avec citations
-et un refus explicite si l'info n'y est pas. Ça réduit drastiquement les
-hallucinations — Projet 05, rappel de récupération mesuré à 100 %.
-</details>
-
-<details>
-<summary><b>Le principe du moindre privilège (IAM)</b></summary>
-<br>
-Un compte de service ne reçoit que les droits strictement nécessaires à sa
-tâche — jamais un rôle "Owner" par défaut. Sur le Projet 13, le compte
-<code>dbt-loader</code> n'a que <code>bigquery.dataEditor</code> +
-<code>bigquery.jobUser</code>, aucun accès au reste du projet cloud.
-</details>
-
-<details>
-<summary><b>ERP, c'est quoi exactement ?</b></summary>
-<br>
-<i>Enterprise Resource Planning</i> — le logiciel qui centralise la gestion
-d'une entreprise (ventes, achats, stocks, compta) sur une même base de
-données. Sur ce portfolio, un ERP n'est jamais un mock Postgres déguisé :
-Ventes/Commerce tourne sur un vrai AS/400 (Db2 for i, conventions
-authentiques), Finance/Compta sur un vrai SQL Server édition Developer —
-reproduire un ERP, c'est reproduire sa techno, pas seulement sa forme.
-Projet 19, section <a href="https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise/blob/main/docs/outils.md">docs/outils.md</a>.
-</details>
-
-<details>
-<summary><b>dbt, en une phrase</b></summary>
-<br>
-<i>data build tool</i> — transforme la donnée <i>en SQL versionné</i>
-directement dans l'entrepôt (approche ELT, voir ci-dessus) : chaque
-transformation est un fichier <code>.sql</code> testable, documenté,
-avec lignage automatique entre modèles. Pas un script qu'on relance à la
-main — un vrai projet logiciel appliqué à la donnée. Utilisé dans les
-projets 04, 10, 13, 18 et 19 (snapshots SCD2, tests, contracts,
-exposures).
-</details>
-
-<details>
-<summary><b>Entrepôt de données (data warehouse)</b></summary>
-<br>
-La base où la donnée nettoyée et modélisée vit pour l'analyse — séparée
-des bases opérationnelles (ERP, CRM...) qui, elles, servent à faire
-tourner le métier au quotidien. Structuré en couches : <code>raw</code>
-(copie brute, jamais modifiée) → <code>staging</code> (nettoyage) →
-<code>marts</code> (modèle en étoile ou constellation, prêt pour la BI).
-Projets 04 et 19 (ce dernier avec 3 domaines qui convergent vers un même
-entrepôt).
-</details>
-
-<details>
-<summary><b>Pourquoi une "base de production" simulée ?</b></summary>
-<br>
-Aucune vraie donnée d'entreprise n'est utilisée (confidentialité) — mais
-la <i>technique</i> est réelle : un simulateur d'usage fait vivre chaque
-base sur plusieurs mois simulés, pour que le volume et les vrais
-problèmes (doublons, bloat, formats incohérents) émergent de l'usage
-plutôt que d'être injectés à la main. Toujours présenté entre guillemets
-dans les README pour ne jamais laisser penser que c'est une vraie
-entreprise. Projet 19.
-</details>
-
-<details>
-<summary><b>Pourquoi Power BI plutôt qu'un autre outil de visualisation ?</b></summary>
-<br>
-Standard du marché en environnement Microsoft/entreprise française,
-avec un vrai langage de modélisation (DAX) et une sécurité au niveau
-des lignes (RLS) native — pas juste des graphiques. "Piloter" veut dire
-concrètement : un modèle en étoile propre, des mesures DAX qui répondent
-à une vraie question métier (pas juste des sommes), et un accès
-restreint par rôle (RH ne voit pas Finance, etc.). Projets 09, 13, 18
-et 19 — même toolchain à chaque fois, cohérence de compétence plutôt que
-survol d'outils différents.
 </details>
 
 ---
@@ -598,7 +496,7 @@ refus explicite mesuré).
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
 | **Reproductibilité** | Scripts rejouables (`load_postgres_to_bq.py`, `fetch_deals.py`, `build_index()`), environnements Docker/venv versionnés |
-| **Garde-fous coûts cloud** | Région unique, colonnes explicites (jamais de `SELECT *`), staging en vues / marts en tables matérialisées |
+| **Garde-fous coûts cloud** | Région unique, colonnes explicites dans les requêtes facturées (BigQuery), staging en vues / marts en tables matérialisées |
 | **Commits descriptifs** | Convention `feat:` / `docs:` / `fix:`, message = contexte + résultat chiffré, jamais juste "update" |
 
 ---

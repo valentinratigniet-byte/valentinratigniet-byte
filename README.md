@@ -160,7 +160,7 @@ vues, test statistique, note d'une page pour un décideur.
 erreur d'estimation **13,7 %** contre 18,4 % pour la médiane communale.
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![statsmodels](https://img.shields.io/badge/-statsmodels-4479A1?style=flat-square) ![Open data](https://img.shields.io/badge/-DVF%20open%20data-137A8B?style=flat-square)
-· [Repo](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) · [Note décideur](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel/blob/main/docs/note-decideur.md)
+· [Repo](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) · [Note décideur](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel/blob/main/docs/note-decideur.md) · [Démo live](https://prix-immobilier-mel.streamlit.app/)
 </details>
 
 <details>

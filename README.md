@@ -12,6 +12,7 @@ réutilise la précédente, de la base opérationnelle jusqu'au cloud.
 [![Site vitrine](https://img.shields.io/badge/-🌐%20Voir%20le%20portfolio%20en%20ligne-137A8B?style=for-the-badge)](https://valentinratigniet-byte.github.io/)
 
 [![Email](https://img.shields.io/badge/-valentinratigniet%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:valentinratigniet@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valentin-ratigniet-915272360)
 [![GitHub followers](https://img.shields.io/github/followers/valentinratigniet-byte?style=flat-square&label=Follow&logo=github)](https://github.com/valentinratigniet-byte)
 ![Profile views](https://komarev.com/ghpvc/?username=valentinratigniet-byte&style=flat-square&color=137A8B&label=Vues+du+profil)
 

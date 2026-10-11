@@ -76,7 +76,7 @@ projets.
 |---|---|
 | **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
 | **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
-| **Business Analyst / Contrôle de gestion** | [21 · Power BI → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
+| **Business Analyst / Contrôle de gestion** | [21 · Spécification fonctionnelle → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport/blob/main/docs/00-specification-fonctionnelle.md) (23 user stories, règles de gestion, recette) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
 | **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
 
 ## 🧩 L'écosystème
@@ -512,7 +512,7 @@ entrepôt 93/97 + 4 erreurs corrigées et documentées ; entrepôt ↔ nouveau
 modèle : 2 213 valeurs, 0 écart), pipeline complet en ≈ 2 minutes rejoué en CI.
 
 ![DuckDB](https://img.shields.io/badge/-DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-· [Repo](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport)
+· [Repo](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) · [Spécification fonctionnelle](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport/blob/main/docs/00-specification-fonctionnelle.md)
 </details>
 
 ### 🤖 IA / LLM

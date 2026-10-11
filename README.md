@@ -36,6 +36,7 @@ réutilise la précédente, de la base opérationnelle jusqu'au cloud.
 - Étapes Power Query converties en **SQL natif** sur des sources hétérogènes (AS/400, TMS, OPM) pour alléger les rapports.
 - Tableaux de bord de pilotage opérationnel : TRS véhicules, plannings, écarts comptables, projections d'heures.
 - Étude de cadrage : passage à un **entrepôt de données centralisé**, méthode **ABC**, accès par profil/service.
+- Sujets prolongés dans le portfolio, sur des données entièrement fictives : [21 · entrepôt de pilotage sous Power BI](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) et [17 · rentabilité en méthode ABC](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client).
 
 **Master 2 Économie appliquée** (conseil économique aux entreprises), Université de Lille · 2024 → 2026
 

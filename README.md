@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;22+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;23+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+R+%C2%B7+RAG" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -75,7 +75,7 @@ projets.
 
 | Vous recrutez un·e... | Commencez par... |
 |---|---|
-| **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
+| **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [23 · Urgences HDF en R](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) (R Markdown, qualité des données) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
 | **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
 | **Business Analyst / Contrôle de gestion** | [21 · Spécification fonctionnelle → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport/blob/main/docs/00-specification-fonctionnelle.md) (23 user stories, règles de gestion, recette) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
 | **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
@@ -146,6 +146,24 @@ source — utilisé dans les projets 04, 10, 11 et 13.
 ## 📂 Projets — classés par compétence dominante
 
 ### 📊 Data Analyst — de la donnée brute à la décision
+
+<details open>
+<summary>⭐ <b>23 · Activité des urgences en Hauts-de-France (R / R Markdown)</b> — données réelles DREES 2017-2023, contrôle qualité RPU testé <i>(déplié)</i></summary>
+<br>
+
+**Problème** : un observatoire des urgences doit produire des indicateurs d'activité, aider les
+établissements à fiabiliser les données qu'ils transmettent, et restituer aux décideurs.
+**Méthode** : séries quotidiennes réelles (DREES) et épidémies (Santé publique France) en R ; extrait RPU
+simulé avec 12 types de défauts injectés et catalogués, qui sert de vérité terrain aux contrôles qualité ;
+rapports R Markdown paramétrés par département et par établissement ; note d'une page en PDF ; renv,
+38 tests testthat, CI qui rend et publie les 16 rapports.
+**Résultat** : **1,99 M** de passages en 2023, **−2,5 %** vs 2019 (France −6,1 %), Pas-de-Calais **+8,1 %**,
+Oise −7,4 % ; le lundi pèse **+10 %** ; les contrôles retrouvent **exactement les 23 596 défauts injectés**,
+et ce test a trouvé deux bugs dans le générateur lui-même.
+
+![R](https://img.shields.io/badge/-R-276DC3?style=flat-square&logo=r&logoColor=white) ![R Markdown](https://img.shields.io/badge/-R%20Markdown-137A8B?style=flat-square) ![testthat](https://img.shields.io/badge/-testthat-555?style=flat-square)
+· [Repo](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) · [Rapports en ligne](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/) · [Note PDF](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/note_ars.pdf)
+</details>
 
 <details open>
 <summary>⭐ <b>22 · Prix des logements de la métropole lilloise</b> — 73 271 ventes notariées réelles (DVF), régression hédonique <i>(déplié)</i></summary>
@@ -540,8 +558,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 22 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 21 des 22 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 23 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 38 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 22 des 23 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -577,7 +595,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 22 projets.
+autant que le code pour donner une impression de cohérence sur 23 projets.
 
 <div align="center">
 

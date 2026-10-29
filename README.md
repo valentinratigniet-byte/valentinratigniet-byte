@@ -157,15 +157,16 @@ source — utilisé dans les projets 04, 10, 11 et 13.
 publique France) et population (INSEE) en R ; extrait RPU simulé au format national (règles de codage FEDORU) avec 15 types de défauts injectés et
 catalogués, qui sert de vérité terrain aux contrôles qualité ; indicateurs issus des RPU (durée de passage,
 hospitalisation, gravité) qui publient la part de passages écartés ; rapports R Markdown paramétrés par
-département et par établissement ; carte ; note d'une page en PDF ; renv, 77 tests testthat, CI qui rend
+département et par établissement ; carte ; application Shiny qui tourne dans le navigateur (shinylive) ; note
+d'une page en PDF ; renv, 77 tests testthat, CI qui rend
 et publie les 18 rapports.
 **Résultat** : **1,99 M** de passages en 2023, **−2,5 %** vs 2019 (France −6,1 %), **3 320 passages pour
 10 000 habitants** ; le Pas-de-Calais (**+8,1 %**) partait du taux le plus bas de la région ; le lundi pèse
 **+10 %** ; 22 services sur 64 ne déclarent pas leurs hospitalisations à la SAE ; les contrôles retrouvent **exactement les 24 757 défauts injectés**, et ce test a trouvé des bugs
 dans le générateur lui-même ainsi que le piège de l'heure répétée au passage à l'heure d'hiver.
 
-![R](https://img.shields.io/badge/-R-276DC3?style=flat-square&logo=r&logoColor=white) ![R Markdown](https://img.shields.io/badge/-R%20Markdown-137A8B?style=flat-square) ![testthat](https://img.shields.io/badge/-testthat-555?style=flat-square)
-· [Repo](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) · [Rapports en ligne](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/) · [Note PDF](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/note_ars.pdf)
+![R](https://img.shields.io/badge/-R-276DC3?style=flat-square&logo=r&logoColor=white) ![R Markdown](https://img.shields.io/badge/-R%20Markdown-137A8B?style=flat-square) ![testthat](https://img.shields.io/badge/-testthat-555?style=flat-square) ![Shiny](https://img.shields.io/badge/-Shiny-276DC3?style=flat-square)
+· [Repo](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) · [Rapports en ligne](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/) · [Application Shiny](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/app/) · [Note PDF](https://valentinratigniet-byte.github.io/projet-23-urgences-hdf-r/note_ars.pdf)
 </details>
 
 <details open>

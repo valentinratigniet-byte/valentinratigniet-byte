@@ -153,15 +153,15 @@ source — utilisé dans les projets 04, 10, 11 et 13.
 
 **Problème** : un observatoire des urgences doit produire des indicateurs d'activité, aider les
 établissements à fiabiliser les données qu'ils transmettent, et restituer aux décideurs.
-**Méthode** : séries quotidiennes réelles (DREES), épidémies (Santé publique France) et population (INSEE)
-en R ; extrait RPU simulé au format national (règles de codage FEDORU) avec 15 types de défauts injectés et
+**Méthode** : séries quotidiennes réelles (DREES), 64 services d'urgence réels (SAE 2023), épidémies (Santé
+publique France) et population (INSEE) en R ; extrait RPU simulé au format national (règles de codage FEDORU) avec 15 types de défauts injectés et
 catalogués, qui sert de vérité terrain aux contrôles qualité ; indicateurs issus des RPU (durée de passage,
 hospitalisation, gravité) qui publient la part de passages écartés ; rapports R Markdown paramétrés par
-département et par établissement ; note d'une page en PDF ; renv, 71 tests testthat, CI qui rend et publie
-les 17 rapports.
+département et par établissement ; carte ; note d'une page en PDF ; renv, 77 tests testthat, CI qui rend
+et publie les 18 rapports.
 **Résultat** : **1,99 M** de passages en 2023, **−2,5 %** vs 2019 (France −6,1 %), **3 320 passages pour
 10 000 habitants** ; le Pas-de-Calais (**+8,1 %**) partait du taux le plus bas de la région ; le lundi pèse
-**+10 %** ; les contrôles retrouvent **exactement les 24 757 défauts injectés**, et ce test a trouvé des bugs
+**+10 %** ; 22 services sur 64 ne déclarent pas leurs hospitalisations à la SAE ; les contrôles retrouvent **exactement les 24 757 défauts injectés**, et ce test a trouvé des bugs
 dans le générateur lui-même ainsi que le piège de l'heure répétée au passage à l'heure d'hiver.
 
 ![R](https://img.shields.io/badge/-R-276DC3?style=flat-square&logo=r&logoColor=white) ![R Markdown](https://img.shields.io/badge/-R%20Markdown-137A8B?style=flat-square) ![testthat](https://img.shields.io/badge/-testthat-555?style=flat-square)
@@ -562,7 +562,7 @@ refus explicite mesuré).
 | Pratique | Comment elle est appliquée ici |
 |---|---|
 | **Un repo = un projet** | 23 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 71 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 22 des 23 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 77 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 22 des 23 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |

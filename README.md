@@ -499,6 +499,24 @@ forcée — 7 phases du cadrage terminées, cadrage complet dans
 </details>
 
 <details>
+<summary><b>25 · Agent IA sur BigQuery</b> — Google ADK + Gemini, lecture seule, évalué sur 10 questions : 9/10</summary>
+<br>
+
+**Problème** : un agent qui « parle à la base » est facile à montrer et difficile à croire : un SQL qui s'exécute
+n'est pas un chiffre juste.
+**Méthode** : agent Google ADK branché sur l'entrepôt BigQuery du projet 13, avec écriture bloquée côté outil,
+1 Go maximum par requête et outils facturés retirés ; 10 questions dont la réponse de référence est calculée en
+SQL, l'agent est noté automatiquement.
+**Résultat** : **9 réponses justes sur 10**. Première leçon : le SQL était juste, mais l'agent comptait les
+commandes annulées dans le chiffre d'affaires tant que la règle métier ne lui était pas donnée. Seconde leçon :
+une fois la règle donnée, il l'applique aussi au comptage des clients (4 854 au lieu de 4 889). Une règle doit
+dire à quoi elle ne s'applique pas.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Google ADK](https://img.shields.io/badge/-Google%20ADK-4285F4?style=flat-square) ![Gemini](https://img.shields.io/badge/-Gemini-8E75B2?style=flat-square) ![BigQuery](https://img.shields.io/badge/-BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-25-agent-ia-bigquery) · [Résultats de l'évaluation](https://github.com/valentinratigniet-byte/projet-25-agent-ia-bigquery/blob/main/eval/resultats.md)
+</details>
+
+<details>
 <summary><b>20 · Pilotage de projets d'ingénierie</b> — Azure Databricks/PySpark, construit pour une candidature ciblée</summary>
 <br>
 

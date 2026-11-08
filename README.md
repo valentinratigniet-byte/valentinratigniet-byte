@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;23+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+R+%C2%B7+RAG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;25+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+SQL+Server+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+R" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -76,7 +76,7 @@ projets.
 | Vous recrutez un·e... | Commencez par... |
 |---|---|
 | **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [23 · Urgences HDF en R](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) (R Markdown, qualité des données) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
-| **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
+| **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [26 · Migration Oracle → SQL Server](https://github.com/valentinratigniet-byte/projet-26-migration-oracle-sqlserver) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
 | **Business Analyst / Contrôle de gestion** | [21 · Spécification fonctionnelle → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport/blob/main/docs/00-specification-fonctionnelle.md) (23 user stories, règles de gestion, recette) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
 | **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
 
@@ -518,6 +518,25 @@ dont les mesures sont vérifiées contre les valeurs de référence. Démo en li
 </details>
 
 <details>
+<summary><b>26 · Migration Oracle → SQL Server</b> — ERP Oracle, paquet SSIS incrémental, entrepôt T-SQL, Excel VBA, recette 506/506</summary>
+<br>
+
+**Problème** : une PME agroalimentaire migre le reporting de son ERP Oracle vers un entrepôt SQL Server, et son
+contrôle de gestion travaille dans Excel. Une migration n'est finie que si les chiffres arrivent intacts.
+**Méthode** : ERP normalisé sous Oracle (package PL/SQL, prix indexés sur les indices INSEE réels, entreprise
+fictive) ; paquet SSIS généré par code (filigranes, 9 flux en parallèle, journal, gestion d'erreurs) ; entrepôt
+en étoile avec dimension client SCD2 et procédures `MERGE` transactionnelles ; classeur VBA qui s'actualise par
+requêtes paramétrées et exporte le dossier mensuel en PDF ; CI qui rejoue tout sous Linux.
+**Résultat** : **506/506** valeurs identiques entre Oracle et SQL Server. La recette a démasqué un défaut que
+SSIS ne signalait pas : en mode « Batch », la source ODBC perdait 17 % des commandes sans aucune erreur. Les
+données montrent la marge du chocolat en GMS tomber de 22 % à 17 % en 2024, quand le cacao flambe et que le
+tarif reste figé jusqu'à la négociation annuelle.
+
+![Oracle](https://img.shields.io/badge/-Oracle-F80000?style=flat-square&logo=oracle&logoColor=white) ![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white) ![SSIS](https://img.shields.io/badge/-SSIS-5C2D91?style=flat-square) ![VBA](https://img.shields.io/badge/-Excel%20VBA-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-26-migration-oracle-sqlserver) · [Recette](https://github.com/valentinratigniet-byte/projet-26-migration-oracle-sqlserver/blob/main/recette/RESULTATS.md) · [Schéma d'architecture](https://htmlpreview.github.io/?https://github.com/valentinratigniet-byte/projet-26-migration-oracle-sqlserver/blob/main/docs/architecture.html)
+</details>
+
+<details>
 <summary><b>20 · Pilotage de projets d'ingénierie</b> — Azure Databricks/PySpark, construit pour une candidature ciblée</summary>
 <br>
 
@@ -581,8 +600,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 23 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 77 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 22 des 23 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 25 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 77 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 23 des 25 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -618,7 +637,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 23 projets.
+autant que le code pour donner une impression de cohérence sur 25 projets.
 
 <div align="center">
 

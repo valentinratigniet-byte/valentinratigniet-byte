@@ -2,7 +2,7 @@
 
 # Bonjour, je suis Valentin Ratigniet 👋
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;25+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+SQL+Server+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+R" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1200&color=137A8B&center=true&vCenter=true&width=650&lines=Analyste+%2F+Ing%C3%A9nieur+Donn%C3%A9es;26+projets+data+de+bout+en+bout;PostgreSQL+%C2%B7+SQL+Server+%C2%B7+dbt+%C2%B7+Power+BI+%C2%B7+BigQuery+%C2%B7+R" alt="Typing SVG" />
 
 **Profil hybride** : culture financière (Master Économie Appliquée + alternance
 Business Analyst) et ingénierie de données. Ce profil n'est pas une collection
@@ -75,7 +75,7 @@ projets.
 
 | Vous recrutez un·e... | Commencez par... |
 |---|---|
-| **Data Analyst** | [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [23 · Urgences HDF en R](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) (R Markdown, qualité des données) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
+| **Data Analyst** | [27 · Qualité de l'air à météo égale](https://github.com/valentinratigniet-byte/projet-27-qualite-air-mel) (normalisation météo, note d'analyse) → [22 · Prix immobilier MEL](https://github.com/valentinratigniet-byte/projet-22-prix-immobilier-mel) (73 000 ventes réelles, économétrie) → [23 · Urgences HDF en R](https://github.com/valentinratigniet-byte/projet-23-urgences-hdf-r) (R Markdown, qualité des données) → [01 · Olist](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce) (données réelles, ~100k commandes) → [09 · Dashboard Power BI](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi) → [08 · SQL analytique](https://github.com/valentinratigniet-byte/projet-08-sql-analytique) |
 | **Data Engineer** | [19 · Plateforme multi-domaines](https://github.com/valentinratigniet-byte/projet-19-plateforme-entreprise) → [21 · Entrepôt transport](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport) → [13 · BigQuery](https://github.com/valentinratigniet-byte/projet-13-entrepot-central-bigquery) → [26 · Migration Oracle → SQL Server](https://github.com/valentinratigniet-byte/projet-26-migration-oracle-sqlserver) → [20 · Databricks](https://github.com/valentinratigniet-byte/projet-20-pilotage-projets-databricks) |
 | **Business Analyst / Contrôle de gestion** | [21 · Spécification fonctionnelle → entrepôt](https://github.com/valentinratigniet-byte/projet-21-entrepot-transport/blob/main/docs/00-specification-fonctionnelle.md) (23 user stories, règles de gestion, recette) → [15 · Écarts Prix/Volume/Mix](https://github.com/valentinratigniet-byte/projet-15-reporting-ecarts-cg) → [17 · ABC costing](https://github.com/valentinratigniet-byte/projet-17-rentabilite-produit-client) → [16 · Business case](https://github.com/valentinratigniet-byte/projet-16-business-case-investissement) |
 | **2 minutes seulement** | Le diagramme ci-dessous, puis [14 · Filiation](https://github.com/valentinratigniet-byte/projet-14-filiation) : cliquer un indicateur et remonter jusqu'à la donnée brute |
@@ -146,6 +146,25 @@ source — utilisé dans les projets 04, 10, 11 et 13.
 ## 📂 Projets — classés par compétence dominante
 
 ### 📊 Data Analyst — de la donnée brute à la décision
+
+<details open>
+<summary>⭐ <b>27 · Qualité de l'air à Lille, à météo égale</b> — 2 146 jours de mesures réelles, normalisation météo, note d'analyse <i>(déplié)</i></summary>
+<br>
+
+**Problème** : une concentration de NO₂ qui baisse peut traduire une politique efficace… ou une année pluvieuse.
+Comparer deux années brutes, ou juger la ZFE sur la série brute, mène à de fausses conclusions.
+**Méthode** : ingestion incrémentale des mesures horaires LCSQA (un CSV national par jour, filtré en mémoire)
+et de la météo Météo-France dans DuckDB ; dbt (dédoublonnage, fuseau horaire vérifié, 12 tests) ; normalisation
+météo en R (`rmweather`, forêt aléatoire, R² de 77 à 85 % sur des heures jamais vues), tendances de Theil-Sen,
+dépassements de seuils, régression segmentée pour la ZFE ; note de 3 pages en PDF.
+**Résultat** : NO₂ **−3,3 %/an** à météo égale le long du trafic, au même rythme en fond ; les PM2.5 « remontent »
+de **+15 %** entre 2024 et 2025 en brut mais **−2 %** à météo égale (2024 était la plus pluvieuse) ; **58 %** des jours
+de dépassement PM10 tombent en mars ; **aucun effet net mesurable de la ZFE** à ce stade, et ce qui permettrait
+une vraie évaluation.
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![DuckDB](https://img.shields.io/badge/-DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black) ![dbt](https://img.shields.io/badge/-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white) ![R](https://img.shields.io/badge/-R-276DC3?style=flat-square&logo=r&logoColor=white)
+· [Repo](https://github.com/valentinratigniet-byte/projet-27-qualite-air-mel) · [Note PDF](https://github.com/valentinratigniet-byte/projet-27-qualite-air-mel/blob/main/note/note.pdf)
+</details>
 
 <details open>
 <summary>⭐ <b>23 · Activité des urgences en Hauts-de-France (R / R Markdown)</b> — données réelles DREES 2017-2023, contrôle qualité RPU testé <i>(déplié)</i></summary>
@@ -600,8 +619,8 @@ refus explicite mesuré).
 
 | Pratique | Comment elle est appliquée ici |
 |---|---|
-| **Un repo = un projet** | 25 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
-| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 77 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 23 des 25 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
+| **Un repo = un projet** | 26 dépôts indépendants, chacun avec un README structuré (problème → méthode → résultats chiffrés → reproduction) |
+| **Tests systématiques, vérifiés par CI** | dbt tests (unicité, non-nullité, intégrité référentielle) sur les projets 04/10/11/13/18 ; tests qualité Python sur les projets 02/09/12/14 ; constats d'analyse rejoués sur les données réelles (Olist) sur le projet 01 ; asserts d'identité/réconciliation comptable sur les projets 15/16/17 ; RLS testée avec les vrais rôles sur les projets 18/19 ; tests PySpark sur le projet 20 ; parité KPI par KPI Power BI ↔ entrepôt sur le projet 21 ; 77 tests testthat dont la détection exacte d'un catalogue de défauts sur le projet 23 ; 25 des 26 dépôts ont une CI GitHub Actions qui rejoue le pipeline à chaque push — badge cliquable dans chaque README concerné, pas juste une affirmation |
 | **Documentation vivante** | Journal de bord par projet, descriptions **in-situ** dans les modèles Power BI, dictionnaires de données générés (pas de doc qui se périme dans un coin) |
 | **Secrets jamais commités** | `.gitignore` systématique, clés de service hors repo, tout secret lu depuis l'environnement (`ANTHROPIC_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`) |
 | **Moindre privilège** | Comptes de service à droits scopés (IAM BigQuery : `dataEditor` + `jobUser`, jamais `Owner`) |
@@ -637,7 +656,7 @@ Retrouve le point de départ recommandé plus haut, dans
 Charte commune **« Petrol & Ambre »** appliquée à tous les dashboards et
 documents du portfolio : <code>#137A8B</code> (signature), <code>#E4A93C</code>
 (accent), déclinée en thème Power BI réutilisable — un détail qui compte
-autant que le code pour donner une impression de cohérence sur 25 projets.
+autant que le code pour donner une impression de cohérence sur 26 projets.
 
 <div align="center">
 
